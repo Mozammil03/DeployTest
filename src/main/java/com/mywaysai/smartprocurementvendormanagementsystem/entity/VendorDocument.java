@@ -1,0 +1,27 @@
+package com.mywaysai.smartprocurementvendormanagementsystem.entity;
+
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import jakarta.persistence.ManyToOne;
+import lombok.Getter;
+import lombok.Setter;
+
+@Entity
+@Getter @Setter
+public class VendorDocument {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
+
+    private String documentName;
+    private String documentType;
+    private String documentNumber;
+    private String status;
+    private String adminComment;
+
+    @ManyToOne
+    private Vendor vendor;
+}
+
