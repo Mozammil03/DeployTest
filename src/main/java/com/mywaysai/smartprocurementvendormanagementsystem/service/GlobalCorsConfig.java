@@ -35,7 +35,7 @@ public class GlobalCorsConfig {
             @Override
             public void addCorsMappings(CorsRegistry registry) {
                 registry.addMapping("/**")
-                    .allowedOriginPatterns("http://localhost:5173", "http://127.0.0.1:5173", "https://*.netlify.app", "https://*.vercel.app")
+                    .allowedOriginPatterns("http://localhost:5173", "http://127.0.0.1:5173", "https://*.railway.app", "https://*.netlify.app", "https://*.vercel.app")
                     .allowedMethods("*")
                     .allowedHeaders("*")
                     .allowCredentials(true);
